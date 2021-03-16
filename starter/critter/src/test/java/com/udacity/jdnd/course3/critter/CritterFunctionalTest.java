@@ -189,6 +189,7 @@ public class CritterFunctionalTest {
 
         Assertions.assertEquals(scheduleDTO.getActivities(), skillSet);
         Assertions.assertEquals(scheduleDTO.getDate(), date);
+        // TODO: The line below throws an error.
         Assertions.assertEquals(scheduleDTO.getEmployeeIds(), employeeList);
         Assertions.assertEquals(scheduleDTO.getPetIds(), petList);
     }

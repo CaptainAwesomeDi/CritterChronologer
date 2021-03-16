@@ -21,6 +21,10 @@ public class EmployeeService {
         return employeeRepository.findById(id).get();
     }
 
+    public List<Employee> getEmployeesByIds(List<Long> ids){
+        return employeeRepository.findByIds(ids);
+    }
+
     public List<Employee> getEmployeesByService(LocalDate date, Set<EmployeeSkill> skills){
         return employeeRepository.findEmployeesForService(date.getDayOfWeek())
                 .stream().filter(employee -> employee.getSkills().containsAll(skills))
